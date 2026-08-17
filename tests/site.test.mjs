@@ -20,9 +20,16 @@ test("page has one primary heading and unique section ids", () => {
   const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]);
   assert.equal(new Set(ids).size, ids.length);
   assert.deepEqual(
-    ["main", "top", "work", "reviews", "writing", "about"].every((id) =>
-      ids.includes(id),
-    ),
+    [
+      "main",
+      "top",
+      "experience",
+      "projects",
+      "writing",
+      "stack",
+      "about",
+      "contact",
+    ].every((id) => ids.includes(id)),
     true,
   );
 });
@@ -67,4 +74,25 @@ test("local navigation and social image targets exist", async () => {
   }
 
   await access(new URL("../assets/og.png", import.meta.url));
+});
+
+test("experience content follows the requested public profile", () => {
+  assert.match(html, /<strong>Security Engineer<\/strong>/);
+  assert.doesNotMatch(html, /project-disclosure/);
+
+  for (const employer of ["Trail of Bits", "Black Paper", "Xtramile", "BulldozAIR"]) {
+    assert.match(html, new RegExp(employer));
+  }
+
+  assert.equal(html.match(/<details\s+class="experience-card/g)?.length, 4);
+});
+
+test("both Medium articles are included", () => {
+  const mediumArticles = new Set(
+    [...html.matchAll(/href="(https:\/\/medium\.com\/@coriopinhas\/[^"]+)"/g)].map(
+      (match) => match[1],
+    ),
+  );
+
+  assert.equal(mediumArticles.size, 2);
 });

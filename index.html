@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Coriolan Pinhas — Blockchain Security Engineer</title>
+    <title>Coriolan Pinhas — Security Engineer</title>
     <meta
       name="description"
-      content="Blockchain security engineering, research, and open-source work by Coriolan Pinhas."
+      content="Security engineering, blockchain research, and developer tooling by Coriolan Pinhas."
     >
-    <meta name="theme-color" content="#f3f0e9">
+    <meta name="theme-color" content="#080b10">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Coriolan Pinhas — Blockchain Security Engineer">
+    <meta property="og:title" content="Coriolan Pinhas — Security Engineer">
     <meta
       property="og:description"
-      content="Auditing blockchain systems and building tools that sharpen security reasoning."
+      content="Blockchain security, open-source tooling, and practical research."
     >
     <meta property="og:url" content="https://coriolan-dev.github.io/">
     <meta
@@ -22,7 +22,7 @@
     >
     <meta
       property="og:image:alt"
-      content="Coriolan Pinhas, blockchain security engineer"
+      content="Coriolan Pinhas, security engineer"
     >
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -38,11 +38,12 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Coriolan Pinhas",
-        "jobTitle": "Blockchain Security Engineer",
+        "jobTitle": "Security Engineer",
         "url": "https://coriolan-dev.github.io/",
         "sameAs": [
           "https://github.com/Coriolan-dev",
           "https://www.linkedin.com/in/coriolan-pinhas",
+          "https://medium.com/@coriopinhas",
           "https://blog.trailofbits.com/authors/coriolan-pinhas/"
         ],
         "knowsAbout": [
@@ -59,428 +60,600 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Coriolan Pinhas, home">
-        <span class="wordmark-mark" aria-hidden="true">CP</span>
-        <span class="wordmark-name">Coriolan Pinhas</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#writing">Writing</a>
-        <a href="#about">About</a>
-      </nav>
-      <a class="header-contact" href="mailto:coriolan.pinhas@trailofbits.com">
-        Get in touch
-        <span aria-hidden="true">↗</span>
-      </a>
+      <div class="header-inner">
+        <a class="wordmark" href="#top" aria-label="Coriolan Pinhas, home">
+          <span aria-hidden="true">&gt;_</span>
+          coriolan.dev
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#writing">Writing</a>
+          <a href="#stack">Stack</a>
+        </nav>
+        <a class="header-link" href="mailto:coriolan.pinhas@trailofbits.com">
+          contact<span aria-hidden="true">()</span>
+        </a>
+      </div>
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-intro">
-          <p class="eyebrow">Security engineer · Researcher · Builder</p>
+        <div class="hero-copy">
+          <p class="availability">
+            <span aria-hidden="true"></span>
+            Paris, France · Working globally
+          </p>
           <h1 id="hero-title">
-            I find the assumptions
-            <span>code forgot to state.</span>
+            Security engineering for systems that cannot afford
+            <span>ambiguous assumptions.</span>
           </h1>
-          <p class="hero-copy">
-            I’m Coriolan Pinhas, a blockchain security engineer at Trail of Bits.
-            I audit high-stakes systems across EVM, Solana, and TON, then turn
-            the lessons into open tools and practical research.
+          <p class="hero-intro">
+            I’m Coriolan Pinhas, a security engineer at Trail of Bits. I review
+            blockchain systems across EVM, Solana, and TON, and build tools that
+            make security reasoning more repeatable.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#work">Explore my work</a>
+            <a class="button button-primary" href="#experience">
+              View experience <span aria-hidden="true">↓</span>
+            </a>
             <a
               class="button button-secondary"
-              href="https://blog.trailofbits.com/authors/coriolan-pinhas/"
+              href="https://github.com/Coriolan-dev"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Read my research
-              <span aria-hidden="true">↗</span>
+              GitHub <span aria-hidden="true">↗</span>
             </a>
           </div>
         </div>
 
-        <aside class="hero-aside" aria-label="Profile at a glance">
-          <div class="status-line">
-            <span class="status-dot" aria-hidden="true"></span>
-            Security Engineer II · Trail of Bits
+        <div class="code-window" role="group" aria-label="Developer profile">
+          <div class="code-window-bar">
+            <span>profile.ts</span>
+            <span>UTF-8</span>
           </div>
-          <dl class="proof-grid">
-            <div>
-              <dt>20+</dt>
-              <dd>engagements at Trail of Bits</dd>
-            </div>
-            <div>
-              <dt>03</dt>
-              <dd>blockchain ecosystems</dd>
-            </div>
-            <div>
-              <dt>01</dt>
-              <dd>first-place audit contest</dd>
-            </div>
-            <div>
-              <dt>93%</dt>
-              <dd>recall in a tooling benchmark</dd>
-            </div>
-          </dl>
-          <p class="location">Paris, France · Working globally</p>
-        </aside>
+          <pre><code><span class="code-keyword">const</span> profile = {
+  role: <span class="code-string">"Security Engineer"</span>,
+  focus: [
+    <span class="code-string">"Smart contract security"</span>,
+    <span class="code-string">"AI-assisted analysis"</span>,
+  ],
+  ecosystems: [
+    <span class="code-string">"EVM"</span>,
+    <span class="code-string">"Solana"</span>,
+    <span class="code-string">"TON"</span>,
+  ],
+  approach: <span class="code-string">"make assumptions explicit"</span>,
+};</code></pre>
+        </div>
+
+        <dl class="signal-grid">
+          <div>
+            <dt>20+</dt>
+            <dd>Trail of Bits engagements</dd>
+          </div>
+          <div>
+            <dt>≈10</dt>
+            <dd>Independent audits</dd>
+          </div>
+          <div>
+            <dt>3</dt>
+            <dd>Blockchain ecosystems</dd>
+          </div>
+          <div>
+            <dt>1st</dt>
+            <dd>Audit contest finish</dd>
+          </div>
+        </dl>
       </section>
 
-      <div class="ticker" role="list" aria-label="Areas of expertise">
-        <span role="listitem">Account abstraction</span>
-        <span role="listitem">DeFi arithmetic</span>
-        <span role="listitem">Cross-chain protocols</span>
-        <span role="listitem">AI-assisted security</span>
-        <span role="listitem">Smart wallets</span>
-      </div>
-
-      <section class="section work-section" id="work" aria-labelledby="work-title">
-        <div class="section-heading">
+      <section class="section experience-section" id="experience">
+        <div class="section-header">
           <div>
-            <p class="section-index">01 / Selected work</p>
-            <h2 id="work-title">Security work that compounds.</h2>
+            <p class="section-label">01 // Experience</p>
+            <h2>Where I’ve worked</h2>
           </div>
           <p>
-            Beyond individual findings, I build methods and tools that make
-            the next review faster, clearer, and harder to fool.
+            Open a role to see the systems, tools, public reviews, and research
+            behind it. Confidential engagements are intentionally unnamed.
+          </p>
+        </div>
+
+        <div class="experience-stack">
+          <details class="experience-card" open>
+            <summary>
+              <span class="experience-period">2025 — Present</span>
+              <span class="experience-role">
+                <strong>Security Engineer</strong>
+                <span>Trail of Bits · Blockchain</span>
+              </span>
+              <span class="experience-scope">EVM · Solana · TON</span>
+              <span class="experience-toggle" aria-hidden="true"></span>
+            </summary>
+
+            <div class="experience-content">
+              <p class="experience-lead">
+                Lead and contribute to security reviews of smart accounts,
+                wallets, DeFi protocols, cross-chain systems, and blockchain
+                infrastructure. More than 20 engagements completed to date.
+              </p>
+
+              <div class="experience-grid">
+                <div class="work-block">
+                  <p class="block-label">What I do</p>
+                  <ul class="check-list">
+                    <li>Lead reviews from threat modeling through final reporting.</li>
+                    <li>Audit Solidity, Rust, FunC/Tolk, Go, and protocol logic.</li>
+                    <li>Analyze account-abstraction and smart-wallet failure modes.</li>
+                    <li>Turn repeated audit patterns into tools and guidance.</li>
+                  </ul>
+                </div>
+
+                <div class="work-block">
+                  <p class="block-label">Tools &amp; engineering</p>
+                  <ul class="link-list">
+                    <li>
+                      <a
+                        href="https://blog.trailofbits.com/2026/03/25/try-our-new-dimensional-analysis-claude-plugin/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Dimensional analysis plugin <span aria-hidden="true">↗</span>
+                      </a>
+                      <span>DeFi unit analysis · 93% benchmark recall</span>
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/crytic/anchorx-ray"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Anchor X-Ray <span aria-hidden="true">↗</span>
+                      </a>
+                      <span>Solana account scanner and visualizer</span>
+                    </li>
+                    <li>
+                      <strong>AI triage platform</strong>
+                      <span>Web interface and LLM-based report triage</span>
+                    </li>
+                    <li>
+                      <strong>Multi-agent audit orchestration</strong>
+                      <span>Auditor and triager workflows with validation gates</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="work-block public-work">
+                <div class="block-heading">
+                  <p class="block-label">Selected public reviews</p>
+                  <span>Reports available</span>
+                </div>
+                <ul class="report-grid">
+                  <li>
+                    <a
+                      href="https://github.com/trailofbits/publications/blob/master/reviews/2025-08-gemini-smartwallet-securityreview.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>Gemini Smart Wallet</span>
+                      <small>Wallet · EVM · 2025 ↗</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/trailofbits/publications/blob/master/reviews/2025-02-franklintempleton-benjicontracts-securityreview.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>Franklin Templeton Benji</span>
+                      <small>Tokenization · EVM · 2025 ↗</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/trailofbits/publications/blob/master/reviews/2025-04-reserve-folio-solidity-securityreview.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>Reserve Folio</span>
+                      <small>Asset management · EVM · 2025 ↗</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/trailofbits/publications/blob/master/reviews/2025-04-reserve-solana-dtfs-securityreview.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>Reserve Solana DTFs</span>
+                      <small>Asset management · Solana · 2025 ↗</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/trailofbits/publications/blob/master/reviews/2025-07-swapcoffee-tondex-securityreview.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>Swap Coffee TON DEX</span>
+                      <small>Exchange · TON · 2025 ↗</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/trailofbits/publications/blob/master/reviews/2025-05-FIVA-yieldtokenizationprotocol-securityreview.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>FIVA Yield Tokenization</span>
+                      <small>DeFi · TON · 2025 ↗</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/trailofbits/publications/blob/master/reviews/2026.03-jobcoin-clockinprogram-securityreview.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>Jobcoin Clock-in Program</span>
+                      <small>Payments · Solana · 2026 ↗</small>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <details class="experience-card">
+            <summary>
+              <span class="experience-period">2023 — 2024</span>
+              <span class="experience-role">
+                <strong>Founder &amp; Lead Security Auditor</strong>
+                <span>Black Paper · Paris</span>
+              </span>
+              <span class="experience-scope">Independent practice</span>
+              <span class="experience-toggle" aria-hidden="true"></span>
+            </summary>
+
+            <div class="experience-content">
+              <p class="experience-lead">
+                Founded and ran an independent smart-contract audit practice,
+                delivering around ten engagements while competing in public
+                audit contests and publishing protocol-risk research.
+              </p>
+
+              <div class="experience-grid">
+                <div class="work-block">
+                  <p class="block-label">Highlights</p>
+                  <ul class="check-list">
+                    <li>Owned scoping, review, reporting, and client delivery.</li>
+                    <li>Audited account-abstraction, DeFi, and token systems.</li>
+                    <li>Placed first in the vVv Launchpad audit contest.</li>
+                    <li>Earned one third-place and four additional top-10 finishes.</li>
+                  </ul>
+                  <a
+                    class="inline-link"
+                    href="https://black-paper.notion.site/Portfolio-b0ea7b1acaa34fb788cfb9ac6c23c4f7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View the public audit portfolio <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+
+                <div class="work-block">
+                  <p class="block-label">Writing from this period</p>
+                  <ul class="link-list">
+                    <li>
+                      <a
+                        href="https://medium.com/@coriopinhas/the-hidden-risks-behind-ethenas-explosive-usde-stablecoin-growth-f4a50b299718"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        The Hidden Risks Behind USDe’s Growth
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                      <span>Medium · Stablecoin and liquidity risk</span>
+                    </li>
+                    <li>
+                      <a
+                        href="https://medium.com/@coriopinhas/unveiling-the-overlooked-risks-of-staking-831e1cf3ad45"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Unveiling the Overlooked Risks of Staking
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                      <span>Medium · Ethereum exit-queue risk</span>
+                    </li>
+                    <li>
+                      <a
+                        href="https://blockchaingamealliance.net/a-dive-into-blockchain-security-measures/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        A Dive into Blockchain Security Measures
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                      <span>Blockchain Game Alliance · Incident analysis</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="experience-card experience-card-compact">
+            <summary>
+              <span class="experience-period">2021 — 2023</span>
+              <span class="experience-role">
+                <strong>Customer Success Manager</strong>
+                <span>Xtramile</span>
+              </span>
+              <span class="experience-scope">SaaS · Client delivery</span>
+              <span class="experience-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="experience-content compact-content">
+              <p>
+                Managed customer relationships and product delivery while
+                completing a self-taught transition into blockchain security.
+              </p>
+            </div>
+          </details>
+
+          <details class="experience-card experience-card-compact">
+            <summary>
+              <span class="experience-period">2020 — 2021</span>
+              <span class="experience-role">
+                <strong>Customer Success Manager</strong>
+                <span>BulldozAIR</span>
+              </span>
+              <span class="experience-scope">Construction tech</span>
+              <span class="experience-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="experience-content compact-content">
+              <p>
+                Worked at the intersection of customers, field operations, and
+                construction software after completing an engineering degree.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="projects">
+        <div class="section-header">
+          <div>
+            <p class="section-label">02 // Projects</p>
+            <h2>Tools I’ve built</h2>
+          </div>
+          <p>
+            Developer-facing security tools that turn audit knowledge into
+            reusable workflows.
           </p>
         </div>
 
         <div class="project-grid">
-          <article class="project project-featured">
-            <div class="project-topline">
-              <p>AI security tooling · 2026</p>
-              <span>Featured</span>
+          <article class="project-card project-card-featured">
+            <div class="card-header">
+              <span>01</span>
+              <span>AI security · Open source</span>
             </div>
-            <div class="project-featured-body">
-              <div>
-                <h3>Dimensional analysis for DeFi</h3>
-                <p>
-                  I built and shipped a Claude Code plugin that annotates units
-                  in arithmetic-heavy code, propagates them across function
-                  boundaries, and flags contradictions for review.
-                </p>
-              </div>
-              <div class="benchmark" role="group" aria-label="Benchmark result">
-                <span class="benchmark-value">93%</span>
-                <span class="benchmark-label">recall</span>
-                <span class="benchmark-detail">vs. 50% baseline prompts</span>
-              </div>
+            <h3>Dimensional analysis</h3>
+            <p>
+              A Claude Code plugin that annotates numerical units, propagates
+              them through a codebase, and flags contradictions mechanically.
+            </p>
+            <div class="metric">
+              <strong>93%</strong>
+              <span>benchmark recall<br>vs. 50% baseline</span>
             </div>
-            <div class="project-links">
-              <a
-                href="https://blog.trailofbits.com/2026/03/25/try-our-new-dimensional-analysis-claude-plugin/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Plugin release <span aria-hidden="true">↗</span>
-              </a>
-              <a
-                href="https://blog.trailofbits.com/2026/03/24/spotting-issues-in-defi-with-dimensional-analysis/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Technical deep dive <span aria-hidden="true">↗</span>
-              </a>
-            </div>
+            <a
+              href="https://blog.trailofbits.com/2026/03/25/try-our-new-dimensional-analysis-claude-plugin/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read the release <span aria-hidden="true">↗</span>
+            </a>
           </article>
 
-          <article class="project project-tool">
-            <p class="project-kicker">Open source · Solana</p>
+          <article class="project-card">
+            <div class="card-header">
+              <span>02</span>
+              <span>Solana · TypeScript</span>
+            </div>
             <h3>Anchor X-Ray</h3>
             <p>
-              A scanner and visualizer for Solana program accounts. It uses
-              Anchor IDLs to decode account data and map relationships that are
-              easy to miss in a test suite.
+              Scans and decodes Solana program accounts from Anchor IDLs, then
+              visualizes their relationships for review and testing.
             </p>
             <a
-              class="text-link"
               href="https://github.com/crytic/anchorx-ray"
               target="_blank"
               rel="noopener noreferrer"
             >
-              View on GitHub <span aria-hidden="true">↗</span>
+              View repository <span aria-hidden="true">↗</span>
             </a>
           </article>
 
-          <article class="project project-research">
-            <p class="project-kicker">Field guide · ERC-4337</p>
-            <h3>Six mistakes in smart accounts</h3>
+          <article class="project-card">
+            <div class="card-header">
+              <span>03</span>
+              <span>LLM systems · Web</span>
+            </div>
+            <h3>Bug-bounty triage</h3>
             <p>
-              Recurring security failures in validation, signatures, modules,
-              upgrades, and gas behavior—distilled from hands-on reviews.
+              A web interface and AI triager for turning incoming reports into
+              structured, reviewable security leads.
             </p>
-            <a
-              class="text-link"
-              href="https://blog.trailofbits.com/2026/03/11/six-mistakes-in-erc-4337-smart-accounts/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read the field guide <span aria-hidden="true">↗</span>
-            </a>
+            <span class="card-status">Internal engineering</span>
           </article>
 
-          <article class="project project-disclosure">
-            <p class="project-kicker">Responsible disclosure</p>
-            <h3>ERC-1271 signature replay</h3>
+          <article class="project-card">
+            <div class="card-header">
+              <span>04</span>
+              <span>Agent systems · Python</span>
+            </div>
+            <h3>Audit orchestration</h3>
             <p>
-              Discovered and responsibly disclosed a replay vulnerability in a
-              production contract, then published the reasoning and remediation.
+              Multi-agent auditor and triager workflows with evidence,
+              witnesses, and explicit validation gates.
             </p>
-            <a
-              class="text-link"
-              href="https://black-paper.notion.site/ERC1271-Signature-Replay-Vulnerability-0124e2c4f5494f1bb347b20ef4dea15f"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read the disclosure <span aria-hidden="true">↗</span>
-            </a>
+            <span class="card-status">Internal engineering</span>
           </article>
         </div>
       </section>
 
-      <section class="section reviews-section" id="reviews" aria-labelledby="reviews-title">
-        <div class="section-heading reviews-heading">
+      <section class="section writing-section" id="writing">
+        <div class="section-header">
           <div>
-            <p class="section-index">02 / Published reviews</p>
-            <h2 id="reviews-title">Selected public engagements.</h2>
+            <p class="section-label">03 // Writing</p>
+            <h2>Research &amp; field notes</h2>
           </div>
           <p>
-            Named work is limited to engagements with publicly available
-            reports. Additional client work remains confidential.
+            Practical security writing for engineers working on wallets, DeFi,
+            transaction signing, and staking systems.
           </p>
         </div>
 
-        <div class="review-list">
+        <div class="article-list">
           <a
-            class="review-row"
-            href="https://github.com/trailofbits/publications/blob/master/reviews/2025-08-gemini-smartwallet-securityreview.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="review-number">01</span>
-            <span class="review-name">Gemini Smart Wallet</span>
-            <span class="review-tags">Wallet · EVM</span>
-            <span class="review-year">2025 ↗</span>
-          </a>
-          <a
-            class="review-row"
-            href="https://github.com/trailofbits/publications/blob/master/reviews/2025-02-franklintempleton-benjicontracts-securityreview.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="review-number">02</span>
-            <span class="review-name">Franklin Templeton Benji</span>
-            <span class="review-tags">Tokenization · EVM</span>
-            <span class="review-year">2025 ↗</span>
-          </a>
-          <a
-            class="review-row"
-            href="https://github.com/trailofbits/publications/blob/master/reviews/2025-04-reserve-folio-solidity-securityreview.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="review-number">03</span>
-            <span class="review-name">Reserve Folio</span>
-            <span class="review-tags">Asset management · EVM</span>
-            <span class="review-year">2025 ↗</span>
-          </a>
-          <a
-            class="review-row"
-            href="https://github.com/trailofbits/publications/blob/master/reviews/2025-04-reserve-solana-dtfs-securityreview.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="review-number">04</span>
-            <span class="review-name">Reserve Solana DTFs</span>
-            <span class="review-tags">Asset management · Solana</span>
-            <span class="review-year">2025 ↗</span>
-          </a>
-          <a
-            class="review-row"
-            href="https://github.com/trailofbits/publications/blob/master/reviews/2025-07-swapcoffee-tondex-securityreview.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="review-number">05</span>
-            <span class="review-name">Swap Coffee TON DEX</span>
-            <span class="review-tags">Exchange · TON</span>
-            <span class="review-year">2025 ↗</span>
-          </a>
-          <a
-            class="review-row"
-            href="https://github.com/trailofbits/publications/blob/master/reviews/2025-05-FIVA-yieldtokenizationprotocol-securityreview.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="review-number">06</span>
-            <span class="review-name">FIVA Yield Tokenization</span>
-            <span class="review-tags">DeFi · TON</span>
-            <span class="review-year">2025 ↗</span>
-          </a>
-          <a
-            class="review-row"
-            href="https://github.com/trailofbits/publications/blob/master/reviews/2026.03-jobcoin-clockinprogram-securityreview.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="review-number">07</span>
-            <span class="review-name">Jobcoin Clock-in Program</span>
-            <span class="review-tags">Payments · Solana</span>
-            <span class="review-year">2026 ↗</span>
-          </a>
-        </div>
-      </section>
-
-      <section class="section writing-section" id="writing" aria-labelledby="writing-title">
-        <div class="section-heading">
-          <div>
-            <p class="section-index">03 / Writing</p>
-            <h2 id="writing-title">Notes from the edge cases.</h2>
-          </div>
-          <p>
-            Practical security research on smart accounts, human-readable
-            transactions, DeFi arithmetic, stablecoins, and staking.
-          </p>
-        </div>
-
-        <div class="writing-grid">
-          <a
-            class="article-card article-card-lead"
             href="https://blog.trailofbits.com/2026/03/24/spotting-issues-in-defi-with-dimensional-analysis/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="article-meta">Trail of Bits · 10 min read</span>
-            <h3>Spotting issues in DeFi with dimensional analysis</h3>
-            <p>
-              A physics-inspired method for catching unit mismatches before
-              they become high-impact arithmetic bugs.
-            </p>
-            <span class="article-arrow" aria-hidden="true">↗</span>
+            <span class="article-date">2026.03</span>
+            <span class="article-title">Spotting issues in DeFi with dimensional analysis</span>
+            <span class="article-source">Trail of Bits</span>
+            <span aria-hidden="true">↗</span>
           </a>
           <a
-            class="article-card"
+            href="https://blog.trailofbits.com/2026/03/11/six-mistakes-in-erc-4337-smart-accounts/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="article-date">2026.03</span>
+            <span class="article-title">Six mistakes in ERC-4337 smart accounts</span>
+            <span class="article-source">Trail of Bits</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a
             href="https://blog.trailofbits.com/2025/08/27/implement-eip-7730-today/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="article-meta">Trail of Bits · Guide</span>
-            <h3>Implement EIP-7730 today</h3>
-            <p>Making hardware-wallet transactions human-readable.</p>
-            <span class="article-arrow" aria-hidden="true">↗</span>
+            <span class="article-date">2025.08</span>
+            <span class="article-title">Implement EIP-7730 today</span>
+            <span class="article-source">Trail of Bits</span>
+            <span aria-hidden="true">↗</span>
           </a>
           <a
-            class="article-card"
             href="https://medium.com/@coriopinhas/the-hidden-risks-behind-ethenas-explosive-usde-stablecoin-growth-f4a50b299718"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="article-meta">Independent research · DeFi</span>
-            <h3>The hidden risks behind USDe’s growth</h3>
-            <p>A systems view of stablecoin depeg and liquidity risk.</p>
-            <span class="article-arrow" aria-hidden="true">↗</span>
+            <span class="article-date">2024.06</span>
+            <span class="article-title">The Hidden Risks Behind USDe’s Growth</span>
+            <span class="article-source">Medium</span>
+            <span aria-hidden="true">↗</span>
           </a>
           <a
-            class="article-card"
             href="https://medium.com/@coriopinhas/unveiling-the-overlooked-risks-of-staking-831e1cf3ad45"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="article-meta">Independent research · Ethereum</span>
-            <h3>The overlooked risks of staking</h3>
-            <p>How exit queues change assumptions about liquidity.</p>
-            <span class="article-arrow" aria-hidden="true">↗</span>
+            <span class="article-date">2024.04</span>
+            <span class="article-title">Unveiling the Overlooked Risks of Staking</span>
+            <span class="article-source">Medium</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a
+            href="https://blockchaingamealliance.net/a-dive-into-blockchain-security-measures/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="article-date">Earlier</span>
+            <span class="article-title">A Dive into Blockchain Security Measures</span>
+            <span class="article-source">BGA</span>
+            <span aria-hidden="true">↗</span>
           </a>
         </div>
       </section>
 
-      <section class="section about-section" id="about" aria-labelledby="about-title">
-        <div class="about-heading">
-          <p class="section-index">04 / About</p>
-          <h2 id="about-title">I followed the systems, then the failure modes.</h2>
-        </div>
-        <div class="about-grid">
-          <div class="about-copy">
-            <p class="about-lead">
-              I’m a Paris-based security engineer working where smart contract
-              behavior, protocol economics, and AI-assisted analysis meet.
-            </p>
-            <p>
-              At Trail of Bits, I lead and contribute to reviews across EVM,
-              Solana, and TON. Before that, I founded an independent smart
-              contract audit practice and delivered around ten engagements.
-            </p>
-            <p>
-              My route into security began with engineering studies at ESTP
-              Paris and a self-taught transition into blockchain. I still bring
-              the same habit from physics: define the units, test the boundary,
-              and distrust an unstated assumption.
-            </p>
+      <section class="section stack-section" id="stack">
+        <div class="section-header">
+          <div>
+            <p class="section-label">04 // Stack</p>
+            <h2>What I work with</h2>
           </div>
-          <ol class="experience-list" aria-label="Experience timeline">
-            <li>
-              <article>
-                <div>
-                  <p class="experience-date">2025 — now</p>
-                  <h3>Trail of Bits</h3>
-                </div>
-                <p>Security Engineer II, Blockchain</p>
-              </article>
-            </li>
-            <li>
-              <article>
-                <div>
-                  <p class="experience-date">2023 — 2024</p>
-                  <h3>Black Paper</h3>
-                </div>
-                <p>Founder &amp; Lead Security Auditor</p>
-              </article>
-            </li>
-            <li>
-              <article>
-                <div>
-                  <p class="experience-date">2020</p>
-                  <h3>ESTP Paris</h3>
-                </div>
-                <p>Master of Engineering</p>
-              </article>
-            </li>
-          </ol>
+          <p>
+            Languages, ecosystems, and analysis methods used across reviews and
+            security-tool development.
+          </p>
         </div>
 
-        <div class="capabilities" role="list" aria-label="Technical capabilities">
-          <div role="listitem">
-            <p>Specialties</p>
-            <span>Account abstraction</span>
-            <span>DeFi &amp; economic risk</span>
-            <span>Cross-chain systems</span>
-            <span>Smart wallets</span>
-          </div>
-          <div role="listitem">
-            <p>Languages</p>
-            <span>Solidity · Vyper · Yul</span>
-            <span>Rust · Go · Python</span>
-            <span>FunC · Tolk</span>
-          </div>
-          <div role="listitem">
-            <p>Approach</p>
-            <span>Manual review</span>
-            <span>Static &amp; dynamic analysis</span>
-            <span>LLM agent workflows</span>
-          </div>
+        <div class="stack-grid">
+          <article>
+            <span class="stack-number">01</span>
+            <h3>Smart contracts</h3>
+            <p>Solidity · Vyper · Yul · Huff</p>
+            <p>Rust · Anchor · FunC · Tolk</p>
+          </article>
+          <article>
+            <span class="stack-number">02</span>
+            <h3>Engineering</h3>
+            <p>Go · Python · TypeScript</p>
+            <p>Static and dynamic analysis</p>
+          </article>
+          <article>
+            <span class="stack-number">03</span>
+            <h3>Specialties</h3>
+            <p>Account abstraction · DeFi</p>
+            <p>Cross-chain · Wallets · Nodes</p>
+          </article>
+          <article>
+            <span class="stack-number">04</span>
+            <h3>AI workflows</h3>
+            <p>Agent pipelines · Skills</p>
+            <p>Triage and audit orchestration</p>
+          </article>
         </div>
       </section>
 
-      <section class="contact-section" aria-labelledby="contact-title">
-        <p class="section-index">05 / Contact</p>
-        <h2 id="contact-title">Let’s make the assumptions explicit.</h2>
-        <p>
-          For security research, engineering, and open-source collaboration.
-        </p>
+      <section class="section about-section" id="about">
+        <div class="section-header">
+          <div>
+            <p class="section-label">05 // Background</p>
+            <h2>Engineer by training</h2>
+          </div>
+          <p>
+            I moved from engineering and customer-facing technology roles into
+            blockchain security through independent study and hands-on audits.
+          </p>
+        </div>
+
+        <div class="education-grid">
+          <article>
+            <span>2017 — 2020</span>
+            <h3>ESTP Paris</h3>
+            <p>Master of Engineering · Entrepreneurship track</p>
+          </article>
+          <article>
+            <span>2015 — 2017</span>
+            <h3>CPGE</h3>
+            <p>Lycée Carnot &amp; Lycée Pasteur · Mathematics and physics</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="section-label">06 // Contact</p>
+          <h2 id="contact-title">Let’s talk security.</h2>
+          <p>Research, engineering, and open-source collaboration.</p>
+        </div>
         <div class="contact-links">
           <a href="mailto:coriolan.pinhas@trailofbits.com">
             Email <span aria-hidden="true">↗</span>
@@ -499,13 +672,20 @@
           >
             LinkedIn <span aria-hidden="true">↗</span>
           </a>
+          <a
+            href="https://medium.com/@coriopinhas"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Medium <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 Coriolan Pinhas</p>
-      <p>Blockchain security · Paris, France</p>
+      <span>© 2026 Coriolan Pinhas</span>
+      <span>Built for the open web</span>
       <a href="#top">Back to top ↑</a>
     </footer>
   </body>
