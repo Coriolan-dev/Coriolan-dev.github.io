@@ -677,6 +677,12 @@ a:focus-visible {
   letter-spacing: -0.025em;
 }
 
+.experience-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .experience-list article {
   min-height: 8.5rem;
   padding: 1.4rem 0;
@@ -686,7 +692,7 @@ a:focus-visible {
   gap: 1.5rem;
 }
 
-.experience-list article:last-child {
+.experience-list li:last-child article {
   border-bottom: 1px solid var(--line);
 }
 
