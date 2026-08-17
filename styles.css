@@ -142,13 +142,12 @@ summary:focus-visible {
 
 .hero {
   width: var(--page);
-  min-height: calc(100vh - 4.5rem);
   margin: 0 auto;
-  padding: clamp(5rem, 10vw, 8rem) 0 3rem;
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(21rem, 0.75fr);
-  align-items: center;
-  gap: clamp(3rem, 7vw, 7rem);
+  padding: clamp(4rem, 8vw, 6rem) 0 clamp(3rem, 6vw, 4.5rem);
+}
+
+.hero-copy {
+  max-width: 58rem;
 }
 
 .availability {
@@ -172,17 +171,12 @@ summary:focus-visible {
 }
 
 .hero h1 {
-  max-width: 18ch;
+  max-width: 14ch;
   margin: 0;
-  font-size: clamp(3.3rem, 6.7vw, 6.8rem);
+  font-size: clamp(3.2rem, 7vw, 6rem);
   font-weight: 680;
-  line-height: 0.98;
+  line-height: 1;
   letter-spacing: -0.06em;
-}
-
-.hero h1 span {
-  display: block;
-  color: var(--cyan);
 }
 
 .hero-intro {
@@ -237,49 +231,8 @@ summary:focus-visible {
   border-color: var(--cyan);
 }
 
-.code-window {
-  overflow: hidden;
-  border: 1px solid var(--line-bright);
-  border-radius: var(--radius);
-  background: rgb(13 18 25 / 88%);
-  box-shadow: 0 1.5rem 5rem rgb(0 0 0 / 30%);
-}
-
-.code-window-bar {
-  min-height: 2.6rem;
-  padding: 0 1rem;
-  border-bottom: 1px solid var(--line);
-  color: var(--faint);
-  background: var(--surface-raised);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: var(--mono);
-  font-size: 0.68rem;
-}
-
-.code-window pre {
-  overflow-x: auto;
-  margin: 0;
-  padding: clamp(1.25rem, 3vw, 2rem);
-  color: #c5cfdd;
-  font-family: var(--mono);
-  font-size: clamp(0.75rem, 1.1vw, 0.88rem);
-  line-height: 1.9;
-  tab-size: 2;
-}
-
-.code-keyword {
-  color: var(--blue);
-}
-
-.code-string {
-  color: var(--green);
-}
-
 .signal-grid {
-  grid-column: 1 / -1;
-  margin: clamp(3rem, 7vw, 6rem) 0 0;
+  margin: clamp(2.5rem, 5vw, 4rem) 0 0;
   padding: 1.6rem 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -478,7 +431,8 @@ summary:focus-visible {
 
 .check-list,
 .link-list,
-.report-grid {
+.report-grid,
+.contest-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -568,6 +522,53 @@ summary:focus-visible {
   text-transform: uppercase;
 }
 
+.inline-link-heading {
+  margin: 0;
+}
+
+.contest-summary {
+  max-width: 52rem;
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.contest-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.contest-list a {
+  min-height: 4.8rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+  background: var(--surface-raised);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition:
+    border-color 150ms ease,
+    background 150ms ease;
+}
+
+.contest-list a:hover {
+  border-color: var(--cyan);
+  background: var(--surface-hover);
+}
+
+.contest-list span {
+  font-size: 0.88rem;
+  font-weight: 650;
+}
+
+.contest-list small {
+  color: var(--faint);
+  font-family: var(--mono);
+  font-size: 0.63rem;
+}
+
 .report-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -639,8 +640,7 @@ summary:focus-visible {
 }
 
 .project-card-featured {
-  min-height: 27rem;
-  grid-column: 1 / -1;
+  min-height: 25rem;
   background:
     linear-gradient(135deg, rgb(122 162 247 / 12%), transparent 55%),
     var(--surface-raised);
@@ -681,8 +681,7 @@ summary:focus-visible {
   font-size: 0.9rem;
 }
 
-.project-card > a,
-.card-status {
+.project-card > a {
   width: fit-content;
   margin-top: 2rem;
   color: var(--blue);
@@ -692,10 +691,6 @@ summary:focus-visible {
 
 .project-card > a:hover {
   color: var(--cyan);
-}
-
-.card-status {
-  color: var(--faint);
 }
 
 .metric {
@@ -899,12 +894,7 @@ summary:focus-visible {
   }
 
   .hero {
-    min-height: auto;
-    grid-template-columns: 1fr;
-  }
-
-  .code-window {
-    max-width: 38rem;
+    padding-top: 4rem;
   }
 
   .experience-card summary {
@@ -939,10 +929,6 @@ summary:focus-visible {
 
   .hero h1 {
     font-size: clamp(3rem, 13vw, 4.5rem);
-  }
-
-  .code-window pre {
-    font-size: 0.7rem;
   }
 
   .signal-grid {
@@ -993,12 +979,9 @@ summary:focus-visible {
     grid-row: 1 / span 2;
   }
 
-  .report-grid {
+  .report-grid,
+  .contest-list {
     grid-template-columns: 1fr;
-  }
-
-  .project-card-featured {
-    grid-column: auto;
   }
 
   .article-list > a {
