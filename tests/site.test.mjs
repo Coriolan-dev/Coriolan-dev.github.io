@@ -48,7 +48,7 @@ test("external links are protected", () => {
 test("published reviews link to the public report repository", () => {
   const reportLinks = [
     ...html.matchAll(
-      /href="(https:\/\/github\.com\/trailofbits\/publications\/[^"]+\.pdf)"/g,
+      /href="(https:\/\/raw\.githubusercontent\.com\/trailofbits\/publications\/[^"]+\.pdf)"/g,
     ),
   ];
 
@@ -80,11 +80,41 @@ test("experience content follows the requested public profile", () => {
   assert.match(html, /<strong>Security Engineer<\/strong>/);
   assert.doesNotMatch(html, /project-disclosure/);
 
-  for (const employer of ["Trail of Bits", "Black Paper", "Xtramile", "BulldozAIR"]) {
+  const employers = ["Trail of Bits", "Black Paper", "Xtramile", "BulldozAIR"];
+  for (const employer of employers) {
     assert.match(html, new RegExp(employer));
   }
 
   assert.equal(html.match(/<details\s+class="experience-card/g)?.length, 4);
+});
+
+test("hero is compact and combines the audit total", () => {
+  assert.match(html, /Welcome to my portfolio\./);
+  assert.match(html, /<dt>30\+<\/dt>\s*<dd>Security audits<\/dd>/);
+  assert.doesNotMatch(html, /class="code-window"/);
+});
+
+test("public contest record is complete and linked", () => {
+  const contestLinks = [
+    ...html.matchAll(
+      /href="(https:\/\/(?:audits\.sherlock\.xyz\/contests|code4rena\.com\/audits)\/[^"]+)"/g,
+    ),
+  ];
+
+  assert.equal(contestLinks.length, 7);
+  assert.match(html, /href="https:\/\/audits\.sherlock\.xyz\/watson\/japy69"/);
+  assert.match(html, /four high and five medium/);
+});
+
+test("former-company descriptions link to official websites", () => {
+  assert.match(html, /href="https:\/\/www\.xtramile\.io\/en\/about-us"/);
+  assert.match(html, /href="https:\/\/www\.bulldozair\.com\/"/);
+});
+
+test("only public projects are presented", () => {
+  assert.equal(html.match(/<article class="project-card/g)?.length, 2);
+  assert.doesNotMatch(html, /class="card-status"/);
+  assert.doesNotMatch(html, /black-paper\.notion\.site/);
 });
 
 test("both Medium articles are included", () => {
