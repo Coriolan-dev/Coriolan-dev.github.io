@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: site-tests
+        name: site tests
+        entry: node --test
+        language: system
+        pass_filenames: false
